@@ -7,5 +7,5 @@ participant server
     activate server
     server-->>browser: Payload of notes
     deactivate server
-    Note right of browser: browser executes callback function that renders the notes
+    Note right of browser: callback function executes and renders notes
 ```
