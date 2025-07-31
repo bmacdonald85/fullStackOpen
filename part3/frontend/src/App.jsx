@@ -81,8 +81,8 @@ const App = () => {
           handleNotification(`Added ${newPerson.name}`, 'success')
         })
         .catch(error => {
-          console.error('Error adding person:', error)
-          handleNotification(`Failed to add ${newPerson.name}`, 'error')
+          console.error('Error adding person:', error.response.data.error)
+          handleNotification(error.response.data.error, 'error')
         })
     }
   }
